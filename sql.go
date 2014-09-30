@@ -14,7 +14,7 @@ func getDsn() string {
 
 	dsn := config.MysqlUser
 	if config.MysqlPass != "" {
-		dsn += "+" + config.MysqlPass
+		dsn += ":" + config.MysqlPass
 	}
 	dsn += "@tcp(" + config.MysqlHost + ")/" + config.MysqlDb
 
